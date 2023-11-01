@@ -1,6 +1,7 @@
 # GalvinDev.me.uk
 Made using [Astro](https://astro.build)  
-![Website](https://img.shields.io/website?url=https%3A%2F%2Fgalvindev.me.uk&style=for-the-badge&label=Website)
+
+[![](https://img.shields.io/website?url=https%3A%2F%2Fgalvindev.me.uk&style=for-the-badge&label=Website)](https://galvindev.me.uk)
 
 *README in progress :P*
 
