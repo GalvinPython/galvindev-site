@@ -1,35 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 import HomeNav from '../components/HomeNav.astro';
 ---
 
-<Layout title="Sites" route='sites'>
+<Layout title="About" route='about'>
 	<main>
-		<h1>All my <span class="text-gradient">Sites</span></h1>
-		<p class="instructions">
-			Each site listed has a short description of it,
-            and the languages used behind them,
-            including a link to each site.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://gc.galvindev.me.uk"
-				title="Global Clicker 🖱️"
-				body="A game where everyone around the world can work together to increase a number by one. Built using React and Express"
-			/>
-            <Card
-                href="#"
-                title="Coming soon 👀"
-                body="A site for a YouTube Channel. Built using Qwik and Express"
-            />
-			<Card
-				href="https://links.galvindev.me.uk"
-				title="My links 🔗"
-				body="A place for all my links. Built using Astro"
-			/>
-		</ul>
-        <HomeNav />
+		<p>Hey, what are you doing here? It's under construction 🔨</p>
+		
+		<HomeNav />
 	</main>
 </Layout>
 
@@ -86,7 +64,7 @@ import HomeNav from '../components/HomeNav.astro';
 	}
 	.link-card-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(48ch, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 		gap: 2rem;
 		padding: 0;
 	}

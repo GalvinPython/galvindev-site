@@ -13,7 +13,7 @@ const { title, route } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="The official GalvinDev website" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title + " | GalvinDev"}</title>
 
@@ -23,7 +23,7 @@ const { title, route } = Astro.props;
 		<meta property="og:site_name" content="GalvinDev">
 		<meta property="og:url" content={"https://galvindev.me.uk/" + route}>
 		<meta property="og:type" content="website">
-		<meta property="og:image" content="/og.png">
+		<meta property="og:image" content="https://galvindev.me.uk/og.png">
 		<meta property="og:locale" content="en_GB">
 
 		<!-- Twitter since I refuse to call it X -->
@@ -73,18 +73,23 @@ const { title, route } = Astro.props;
 	}
 
 	::-webkit-scrollbar {
-		width: 5px;
+		width: 8px;
 	}
 	
 	/* Track */
 	::-webkit-scrollbar-track {
-		background: white;
+		background: #13151a;
 		border-radius: 10px;
 	}
 	
 	/* Handle */
 	::-webkit-scrollbar-thumb {
-		background: #13151a;
+		background: #2e3340;
+		border-radius: 10px;
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		background: #495166;
 		border-radius: 10px;
 	}
 </style>

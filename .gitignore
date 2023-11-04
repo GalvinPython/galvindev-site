@@ -20,5 +20,6 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
-# VSCode
+# VSCode and Development Files
 .vscode/
+*.cmd
