@@ -1,38 +1,20 @@
 ---
 interface Props {
 	title: string;
-	route: string,
 }
 
-const { title, route } = Astro.props;
+const { title } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="The official GalvinDev website" />
+		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title + " | GalvinDev"}</title>
-
-		<!-- Facebook -->
-		<meta property="og:title" content={title + " | GalvinDev"}>
-		<meta property="og:description" content="The official GalvinDev website">
-		<meta property="og:site_name" content="GalvinDev">
-		<meta property="og:url" content={"https://galvindev.me.uk/" + route}>
-		<meta property="og:type" content="website">
-		<meta property="og:image" content="https://galvindev.me.uk/og.png">
-		<meta property="og:locale" content="en_GB">
-
-		<!-- Twitter -->
-		<meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:site" content="@egalvinyt">
-		<meta name="twitter:creator" content="@egalvinyt">
-		<meta name="twitter:title" content={title + " | GalvinDev"}>
-		<meta name="twitter:description" content="The official GalvinDev website">
-		<meta name="twitter:image" content="/og.png">
+		<title>{title}</title>
 	</head>
 	<body>
 		<slot />
@@ -40,9 +22,9 @@ const { title, route } = Astro.props;
 </html>
 <style is:global>
 	:root {
-		--accent: 65, 193, 255;
-		--accent-light: 97, 238, 255;
-		--accent-dark: 1, 98, 255;
+		--accent: 136, 58, 234;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;
 		--accent-gradient: linear-gradient(
 			45deg,
 			rgb(var(--accent)),
@@ -65,31 +47,5 @@ const { title, route } = Astro.props;
 			Bitstream Vera Sans Mono,
 			Courier New,
 			monospace;
-	}
-	
-	.homeNav {
-		color: white;
-		text-decoration: none;
-	}
-
-	::-webkit-scrollbar {
-		width: 8px;
-	}
-	
-	/* Track */
-	::-webkit-scrollbar-track {
-		background: #13151a;
-		border-radius: 10px;
-	}
-	
-	/* Handle */
-	::-webkit-scrollbar-thumb {
-		background: #2e3340;
-		border-radius: 10px;
-	}
-
-	::-webkit-scrollbar-thumb:hover {
-		background: #495166;
-		border-radius: 10px;
 	}
 </style>
