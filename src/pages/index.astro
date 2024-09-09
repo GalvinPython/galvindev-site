@@ -1,0 +1,89 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Home" route=''>
+	<main>
+		<h1>👋 Hi, I'm <span class="text-gradient">Galvin</span></h1>
+		<p class="instructions">It's imgalvin.me now!</p>
+		<p class="instructions">I am mainly a <b>JavaScript/TypeScript</b> developer, that likes to create <b>Websites, Discord Bots and Minecraft Mods!</b><br>I am also a <b>Video Editor</b> and <b>YouTuber!</b></p>
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="/sites"
+				title="View my sites 🖥️"
+				body="Click here to view and learn about all my sites"
+			/>
+			<Card
+				href="/projects"
+				title="View my projects 📄"
+				body="Click here to view and learn about all my other projects, such as my bots"
+			/>
+			<Card
+				href="https://links.galvindev.me.uk"
+				title="All my links 🔗"
+				body="Find all my socials and GitHub"
+			/>
+		</ul>
+		<a href="https://github.com/galvinpython/galvindev-site" class="homeNav">This site is currently under construction 🛠️</a>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.instructions {
+		margin-bottom: 2rem;
+		border: 1px solid rgba(var(--accent-light), 25%);
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+	.instructions code {
+		font-size: 0.8em;
+		font-weight: bold;
+		background: rgba(var(--accent-light), 12%);
+		color: rgb(var(--accent-light));
+		border-radius: 4px;
+		padding: 0.3em 0.4em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent-light));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+</style>

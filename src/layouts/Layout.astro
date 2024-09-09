@@ -1,0 +1,97 @@
+---
+import ViewTransitions from 'astro/components/ViewTransitions.astro';
+interface Props {
+	title: string;
+	route: string,
+}
+
+const { title, route } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="The official GalvinDev website" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title + " | GalvinDev"}</title>
+
+		<!-- Facebook -->
+		<meta property="og:title" content={title + " | GalvinDev"}>
+		<meta property="og:description" content="The official GalvinDev website">
+		<meta property="og:site_name" content="GalvinDev">
+		<meta property="og:url" content={"https://imgalvin.me/" + route}>
+		<meta property="og:type" content="website">
+		<meta property="og:image" content="https://api.microlink.io/?url=https://imgalvin.me&screenshot=true&meta=false&embed=screenshot.url&overlay.browser=dark">
+		<meta property="og:locale" content="en_GB">
+
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@reallygalvin">
+		<meta name="twitter:creator" content="@reallygalvin">
+		<meta name="twitter:title" content={title + " | GalvinDev"}>
+		<meta name="twitter:description" content="The official GalvinDev website">
+		<meta name="twitter:image" content="https://api.microlink.io/?url=https://imgalvin.me&screenshot=true&meta=false&embed=screenshot.url&overlay.browser=dark">
+	</head>
+	<body>
+		<slot />
+		<ViewTransitions />
+	</body>
+</html>
+<style is:global>
+	:root {
+		--accent: 65, 193, 255;
+		--accent-light: 97, 238, 255;
+		--accent-dark: 1, 98, 255;
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			white 60%
+		);
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background: #13151a;
+		background-size: 224px;
+	}
+	code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
+	
+	.homeNav {
+		color: white;
+		text-decoration: none;
+	}
+
+	::-webkit-scrollbar {
+		width: 8px;
+	}
+	
+	/* Track */
+	::-webkit-scrollbar-track {
+		background: #13151a;
+		border-radius: 10px;
+	}
+	
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		background: #2e3340;
+		border-radius: 10px;
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		background: #495166;
+		border-radius: 10px;
+	}
+</style>
