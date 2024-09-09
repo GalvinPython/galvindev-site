@@ -1,4 +1,5 @@
 ---
+import ViewTransitions from 'astro/components/ViewTransitions.astro';
 interface Props {
 	title: string;
 	route: string,
@@ -21,21 +22,22 @@ const { title, route } = Astro.props;
 		<meta property="og:title" content={title + " | GalvinDev"}>
 		<meta property="og:description" content="The official GalvinDev website">
 		<meta property="og:site_name" content="GalvinDev">
-		<meta property="og:url" content={"https://galvindev.me.uk/" + route}>
+		<meta property="og:url" content={"https://imgalvin.me/" + route}>
 		<meta property="og:type" content="website">
-		<meta property="og:image" content="https://galvindev.me.uk/og.png">
+		<meta property="og:image" content="https://api.microlink.io/?url=https://imgalvin.me&screenshot=true&meta=false&embed=screenshot.url&overlay.browser=dark">
 		<meta property="og:locale" content="en_GB">
 
 		<!-- Twitter -->
 		<meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:site" content="@egalvinyt">
-		<meta name="twitter:creator" content="@egalvinyt">
+		<meta name="twitter:site" content="@reallygalvin">
+		<meta name="twitter:creator" content="@reallygalvin">
 		<meta name="twitter:title" content={title + " | GalvinDev"}>
 		<meta name="twitter:description" content="The official GalvinDev website">
-		<meta name="twitter:image" content="/og.png">
+		<meta name="twitter:image" content="https://api.microlink.io/?url=https://imgalvin.me&screenshot=true&meta=false&embed=screenshot.url&overlay.browser=dark">
 	</head>
 	<body>
 		<slot />
+		<ViewTransitions />
 	</body>
 </html>
 <style is:global>

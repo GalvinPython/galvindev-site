@@ -7,30 +7,32 @@ import HomeNav from '../components/HomeNav.astro';
 <Layout title="Projects" route="projects">
 	<main>
 		<h1>All my <span class="text-gradient">Projects</span></h1>
-		<p class="instructions">
-			Each project listed has a short description of it,
-            and the languages used behind them
-		</p>
+		<p class="instructions">All my public projects that you can use/try out since 2020!</p>
 		<ul role="list" class="link-card-grid">
+			<Card
+				href="https://autopublish.galvindev.me.uk"
+				title="Auto Publisher 📢"
+				body="Started in 2024. A Discord Bot designed for automatically publishing announcements!"
+			/>
+			<Card
+				href="#"
+				title="Feedr 📷"
+				body="Started in 2024. A Discord Bot designed for letting people know of the latest YouTube Uploads!"
+			/>
+			<Card
+				href="https://gc.galvindev.me.uk"
+				title="Chatr 💸"
+				body="Started in 2024. A Discord Bot XP bot!"
+			/>
 			<Card
 				href="https://gc.galvindev.me.uk"
 				title="Global Clicker 🖱️"
-				body="A game where you press a button to increase a number by one!"
+				body="Started in 2023. A game where you press a button to increase a number by one!"
 			/>
 			<Card
-				href="https://github.com/galvinpython/StatsBot100"
-				title="StatsBot100 / Choccify 🤖"
-				body="A bot for my channel's Discord server. You cannot invite this bot to your server, but it is open-sourced! *This program will also run Choccify, another Discord bot for my friend's server. The upgrade will be done by the end of this year*"
-			/>
-			<Card
-				href="https://twitter.com/jsalstats"
+				href="https://jsalstats.xyz"
 				title="JSALStats 📈"
-				body="A Twitter bot dedicated to stats around YouTuber 'JackSucksAtLife'. *This project is currently in a hiatus*. This project is open-sourced!"
-			/>
-			<Card
-				href="javascript:void(0)"
-				title="Coming Soon 👀"
-				body="Other Discord bots and software are currently being developed. Stay tuned to my socials"
+				body="Started in 2020. A Twitter bot dedicated to stats around YouTuber 'JackSucksAtLife'"
 			/>
 		</ul>
 		<HomeNav />
