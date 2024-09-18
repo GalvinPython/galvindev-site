@@ -20,6 +20,6 @@ jobs:
           git add bun.lockb
           git config --global user.name 'dependabot[bot]'
           git config --global user.email 'dependabot[bot]@users.noreply.github.com'
+          git commit -m "Update bun.lockb"
           git pull --rebase origin main
-          git commit --amend --no-edit 
-          git push --force
+          git push
